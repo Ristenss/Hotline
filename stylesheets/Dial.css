@@ -1,0 +1,56 @@
+/* Слои вращающегося диска */
+
+#phone .dial {
+  transform-origin: 50% 50%;
+}
+.stage.is-open #keys {
+  position: absolute;
+  inset: 0;
+  transform-origin: 748px 733px;
+  pointer-events: none;
+}
+.stage.is-open #keys .digit-key {
+  pointer-events: auto;
+}
+.dial-assembly {
+  container-type: inline-size;
+}
+.number-plate {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+.number-plate::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  background: #eee6d2;
+}
+.plate-number {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font:
+    10cqw Arial,
+    sans-serif;
+  color: #15130f;
+  line-height: 1;
+}
+.dial-layer {
+  position: absolute;
+  inset: 0;
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-mode: luminance;
+  pointer-events: none;
+}
+.dial-wheel {
+  mask-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22336%22%20height%3D%22336%22%20viewBox%3D%220%200%20336%20336%22%3E%3Ccircle%20cx%3D%22168%22%20cy%3D%22168%22%20r%3D%22166%22%20fill%3D%22white%22%2F%3E%3Ccircle%20cx%3D%22168%22%20cy%3D%22168%22%20r%3D%2281%22%20fill%3D%22black%22%2F%3E%3Ccircle%20cx%3D%22276%22%20cy%3D%22110%22%20r%3D%2219%22%20fill%3D%22black%22%2F%3E%3Ccircle%20cx%3D%22236%22%20cy%3D%2263%22%20r%3D%2219%22%20fill%3D%22black%22%2F%3E%3Ccircle%20cx%3D%22177%22%20cy%3D%2242%22%20r%3D%2219%22%20fill%3D%22black%22%2F%3E%3Ccircle%20cx%3D%22115%22%20cy%3D%2253%22%20r%3D%2219%22%20fill%3D%22black%22%2F%3E%3Ccircle%20cx%3D%2266%22%20cy%3D%2292%22%20r%3D%2219%22%20fill%3D%22black%22%2F%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%22149%22%20r%3D%2219%22%20fill%3D%22black%22%2F%3E%3Ccircle%20cx%3D%2242%22%20cy%3D%22205%22%20r%3D%2219%22%20fill%3D%22black%22%2F%3E%3Ccircle%20cx%3D%2270%22%20cy%3D%22253%22%20r%3D%2219%22%20fill%3D%22black%22%2F%3E%3Ccircle%20cx%3D%22116%22%20cy%3D%22286%22%20r%3D%2219%22%20fill%3D%22black%22%2F%3E%3Ccircle%20cx%3D%22169%22%20cy%3D%22296%22%20r%3D%2219%22%20fill%3D%22black%22%2F%3E%3Cpath%20d%3D%22M208%20263%20Q206%20259%20212%20257%20L224%20252%20Q229%20250%20232%20255%20L265%20308%20Q269%20313%20264%20317%20L225%20335%20L211%20338%20L214%20288%20Z%22%20fill%3D%22black%22%2F%3E%3C%2Fsvg%3E');
+  transform-origin: 50% 50%;
+}
+.dial-center {
+  mask-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22336%22%20height%3D%22336%22%20viewBox%3D%220%200%20336%20336%22%3E%3Ccircle%20cx%3D%22168%22%20cy%3D%22168%22%20r%3D%2281%22%20fill%3D%22white%22%2F%3E%3C%2Fsvg%3E');
+}
+.dial-stop {
+  mask-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22336%22%20height%3D%22336%22%20viewBox%3D%220%200%20336%20336%22%3E%3Cpath%20d%3D%22M208%20263%20Q206%20259%20212%20257%20L224%20252%20Q229%20250%20232%20255%20L265%20308%20Q269%20313%20264%20317%20L225%20335%20L211%20338%20L214%20288%20Z%22%20fill%3D%22white%22%2F%3E%3C%2Fsvg%3E');
+}

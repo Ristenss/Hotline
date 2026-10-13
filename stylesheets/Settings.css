@@ -1,0 +1,165 @@
+/* Окна настроек, ползунки и номерная книжка */
+
+.phone-settings {
+  position: absolute;
+  left: 50px;
+  top: 678px;
+  width: 110px;
+  height: 110px;
+  background: #fff;
+  border: 4px solid #000;
+  border-radius: 22px;
+}
+.phone-settings img {
+  position: absolute;
+  left: 11.05px;
+  top: 10.46px;
+  width: 78.8904px;
+  height: 77.7236px;
+}
+.phone-panel {
+  position: absolute;
+  width: 665px;
+  height: 883px;
+  border: 5px solid #000;
+  border-radius: 23px;
+  background: white;
+  color: black;
+  z-index: 30;
+  box-sizing: border-box;
+}
+#digit-settings {
+  left: 46px;
+  top: 50px;
+}
+#number-book {
+  left: 801px;
+  top: 50px;
+}
+.panel-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 106px;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+.panel-header:active {
+  cursor: grabbing;
+}
+.panel-header h2 {
+  position: absolute;
+  left: 23px;
+  top: 29px;
+  margin: 0;
+  font:
+    40px/1 Tsarga,
+    sans-serif;
+  font-weight: 400;
+}
+#number-book .panel-header h2 {
+  left: 21px;
+}
+.panel-close {
+  position: absolute;
+  right: 9px;
+  top: 1px;
+  width: 95.9624px;
+  height: 96px;
+}
+.panel-close img {
+  display: block;
+  width: 95.9624px;
+  height: 96px;
+  pointer-events: none;
+}
+.slider-row {
+  position: absolute;
+  left: 30px;
+  width: 589.5px;
+  height: 71px;
+}
+.slider-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 39.5px;
+  font:
+    70.763px/71px Tsarga,
+    sans-serif;
+}
+.digit-slider {
+  position: absolute;
+  left: 53px;
+  top: 6px;
+  width: 529.5px;
+  height: 50px;
+  touch-action: none;
+  cursor: pointer;
+}
+.slider-line {
+  position: absolute;
+  left: 15px;
+  right: 0;
+  top: 21px;
+  height: 8px;
+  background: #000;
+  border-radius: 4px;
+  pointer-events: none;
+}
+.slider-thumb {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 52px;
+  height: 50px;
+  overflow: hidden;
+  pointer-events: none;
+}
+.slider-thumb img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 52px;
+  height: 50px;
+  max-width: none;
+}
+.digit-slider:focus-visible {
+  outline: 3px dashed #ff00bb;
+  outline-offset: 5px;
+  border-radius: 5px;
+}
+.book-fields {
+  position: absolute;
+  left: 21px;
+  top: 138px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+.book-number {
+  display: block;
+  width: 610px;
+  height: 98px;
+  border: 4px solid #000;
+  border-radius: 14px;
+  background: #fff;
+  color: #000;
+  font:
+    64px/1 Tsarga,
+    sans-serif;
+  padding: 12px 22px 0;
+  outline-offset: 4px;
+  letter-spacing: 3px;
+}
+.book-number:nth-child(5) {
+  margin-top: -4px;
+}
+.book-number:focus {
+  outline: 3px solid #ff00bb;
+}
+.phone-panel:focus-within {
+  z-index: 31;
+}

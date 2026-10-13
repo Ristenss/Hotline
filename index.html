@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Art Practice — телефон</title>
+    <link rel="stylesheet" href="styles.css?v=20261013-phone-only" />
+    <script src="script.js?v=20261013-phone-only" defer></script>
+    <script src="phone-settings.js?v=20261013-phone-only" defer></script>
+    <script src="assets/audio/samples.js?v=20261013-phone-only" defer></script>
+    <script src="phone-audio.js?v=20261013-phone-only" defer></script>
+    <noscript
+      ><style>
+        #stage {
+          visibility: visible !important;
+        }
+      </style></noscript
+    >
+  </head>
+  <body>
+    <main class="viewport" aria-label="Музыкальный телефон">
+      <div id="stage" class="stage" style="visibility: hidden">
+        <svg
+          id="star"
+          class="star"
+          aria-hidden="true"
+          focusable="false"
+          preserveAspectRatio="none"
+          overflow="hidden"
+          style="display: block"
+          width="1512"
+          height="1560"
+          viewBox="0 0 1512 1560"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="star-shape"
+            d="M839.9 335.26L840.946 339.336L843.446 335.951L1042.32 66.7793L998.463 402.287L997.927 406.391L1001.48 404.261L1285.12 234.063L1120.1 526.812L1118.11 530.331L1122.12 529.774L1447.4 484.507L1186.3 689.864L1183.18 692.32L1187.01 693.366L1504.4 780L1187.01 866.634L1183.18 867.68L1186.3 870.136L1447.4 1075.49L1122.12 1030.23L1118.11 1029.67L1120.1 1033.19L1285.12 1325.94L1001.48 1155.74L997.927 1153.61L998.463 1157.71L1042.32 1493.22L843.446 1224.05L840.946 1220.66L839.9 1224.74L756 1551.95L672.1 1224.74L671.054 1220.66L668.554 1224.05L469.677 1493.22L513.537 1157.71L514.073 1153.61L510.524 1155.74L226.884 1325.94L391.902 1033.19L393.887 1029.67L389.885 1030.23L64.5977 1075.49L325.698 870.136L328.821 867.68L324.989 866.634L7.5957 780L324.989 693.366L328.821 692.32L325.698 689.864L64.5977 484.507L389.885 529.774L393.887 530.331L391.902 526.812L226.884 234.063L510.524 404.261L514.073 406.391L513.537 402.287L469.677 66.7793L668.554 335.951L671.054 339.336L672.1 335.26L756 8.05273L839.9 335.26Z"
+            fill="currentColor"
+            stroke="white"
+            stroke-width="4"
+          />
+        </svg>
+        <button
+          id="phone"
+          class="phone selection-phone"
+          aria-label="Открыть телефон"
+        >
+          <img
+            class="phone-body"
+            src="assets/images/5713f.png"
+            alt="Красный дисковый телефон"
+          /><span class="dial dial-assembly" aria-hidden="true"
+            ><span class="number-plate"
+              ><span class="plate-number" style="left: 82.1429%; top: 32.7381%"
+                >1</span
+              ><span class="plate-number" style="left: 70.2381%; top: 18.75%"
+                >2</span
+              ><span class="plate-number" style="left: 52.6786%; top: 12.5%"
+                >3</span
+              ><span class="plate-number" style="left: 34.2262%; top: 15.7738%"
+                >4</span
+              ><span class="plate-number" style="left: 19.6429%; top: 27.381%"
+                >5</span
+              ><span class="plate-number" style="left: 11.9048%; top: 44.3452%"
+                >6</span
+              ><span class="plate-number" style="left: 12.5%; top: 61.0119%"
+                >7</span
+              ><span class="plate-number" style="left: 20.8333%; top: 75.2976%"
+                >8</span
+              ><span class="plate-number" style="left: 34.5238%; top: 85.119%"
+                >9</span
+              ><span class="plate-number" style="left: 50.2976%; top: 88.0952%"
+                >0</span
+              ></span
+            ><span class="dial-layer dial-wheel"
+              ><img src="assets/images/dial-clean.png" alt="" /></span
+            ><span class="dial-layer dial-center"
+              ><img src="assets/images/dial-clean.png" alt="" /></span
+            ><span class="dial-layer dial-stop"
+              ><img src="assets/images/dial-clean.png" alt="" /></span
+          ></span>
+        </button>
+        <section id="instrument" aria-label="Телефон" hidden>
+          <button
+            id="handset-play"
+            type="button"
+            aria-label="Проиграть набранный номер"
+            aria-pressed="false"
+          >
+            <span class="sr-only">Нажми трубку, чтобы проиграть номер</span>
+          </button>
+          <p id="phone-audio-label" class="sr-only">
+            Набери номер и нажми трубку
+          </p>
+          <div
+            id="slots"
+            class="slots"
+            role="group"
+            aria-label="Набранные цифры"
+          ></div>
+          <div
+            id="keys"
+            class="keys"
+            role="group"
+            aria-label="Цифры на диске телефона"
+          ></div>
+          <button id="reset" class="reset" aria-label="Сбросить все цифры">
+            <img src="assets/images/b71e8.svg" alt="" />
+          </button>
+          <button id="close" class="close" aria-label="Закрыть телефон">
+            <img src="assets/images/ae15c.svg" alt="" />
+          </button>
+          <button
+            id="phone-settings"
+            aria-label="Открыть настройки телефона"
+            aria-controls="digit-settings number-book"
+            class="phone-settings"
+          >
+            <img src="assets/images/settings-star.svg" alt="" />
+          </button>
+          <section
+            id="digit-settings"
+            class="phone-panel"
+            role="dialog"
+            aria-modal="false"
+            aria-labelledby="digit-settings-title"
+            hidden
+          >
+            <header class="panel-header">
+              <h2 id="digit-settings-title">Настройка цифры</h2>
+              <button class="panel-close" aria-label="Закрыть настройку цифры">
+                <img src="assets/images/panel-close.svg" alt="" />
+              </button>
+            </header>
+            <div id="digit-sliders"></div>
+          </section>
+          <section
+            id="number-book"
+            class="phone-panel"
+            role="dialog"
+            aria-modal="false"
+            aria-labelledby="number-book-title"
+            hidden
+          >
+            <header class="panel-header">
+              <h2 id="number-book-title">Номерная книжка</h2>
+              <button class="panel-close" aria-label="Закрыть номерную книжку">
+                <img src="assets/images/panel-close.svg" alt="" />
+              </button>
+            </header>
+            <div class="book-fields">
+              <input
+                class="book-number"
+                type="text"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                maxlength="10"
+                autocomplete="off"
+                aria-label="Номер 1"
+              /><input
+                class="book-number"
+                type="text"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                maxlength="10"
+                autocomplete="off"
+                aria-label="Номер 2"
+              /><input
+                class="book-number"
+                type="text"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                maxlength="10"
+                autocomplete="off"
+                aria-label="Номер 3"
+              /><input
+                class="book-number"
+                type="text"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                maxlength="10"
+                autocomplete="off"
+                aria-label="Номер 4"
+              /><input
+                class="book-number"
+                type="text"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                maxlength="10"
+                autocomplete="off"
+                aria-label="Номер 5"
+              /><input
+                class="book-number"
+                type="text"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                maxlength="10"
+                autocomplete="off"
+                aria-label="Номер 6"
+              />
+            </div>
+          </section>
+        </section>
+      </div>
+    </main>
+    <p id="status" class="sr-only" role="status" aria-live="polite"></p>
+  </body>
+</html>

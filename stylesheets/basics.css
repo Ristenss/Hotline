@@ -1,0 +1,66 @@
+/* Основные настройки страницы и сцена */
+@font-face {
+  font-family: Tsarga;
+  src: url('../assets/fonts/Tsarga-Regular.otf') format('opentype');
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #0084ff;
+}
+body {
+  overflow: clip;
+}
+.viewport {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1512px;
+  height: 982px;
+  flex: none;
+  overflow: clip;
+  background: #0084ff;
+  transform: translate(-50%, -50%) scale(var(--scale, 1));
+  transform-origin: center;
+  isolation: isolate;
+}
+.star {
+  position: absolute;
+  left: 0;
+  top: -288px;
+  width: 1512px;
+  height: 1560px;
+  z-index: -1;
+}
+.stage.is-open .star {
+  left: 4px;
+  top: 50px;
+}
+button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+button:focus-visible {
+  outline: 6px dashed white;
+  outline-offset: 6px;
+}
+button:active {
+  filter: brightness(0.9);
+}
+[hidden] {
+  display: none !important;
+}
